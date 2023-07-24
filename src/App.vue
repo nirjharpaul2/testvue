@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <AppNavBar />
     <router-view />
   </div>
 </template>
-
+<script>
+import AppNavBar from "@/components/AppNavBar.vue";
+export default {
+  name: "AppVue",
+  components: {
+    AppNavBar,
+  },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
